@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(218, 28%, 13%);
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    font: 14px 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+.nav-bar {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+button {
+    width: 280px;
+    padding: 1rem;
+    font-weight: 700;
+    color: white;
+    background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    border: none;
+    border-radius: 25px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 0 2.25rem;
+    position: relative;
+}
+
+a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.top {
+    background-color: hsl(217, 28%, 15%);
+    background-image: url("./images/bg-curvy-desktop.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    font-weight: 400;
+}
+
+.nav-link>a:last-child {
+    margin-right: 0;
+}
+
+.intro>*:not(:last-child) {
+    margin-bottom: 1.8rem;
+}
+
+.intro {
+    margin: auto;
+    text-align: center;
+    width: 720px;
+    line-height: 1.5;
+    padding-bottom: 13rem;
+}
+
+.intro>img {
+    width: 100%;
+}
+
+.intro>h1 {
+    font-size: 2.5rem;
+}
+
+.intro>p {
+    font-size: 1.25rem;
+    width: 85%;
+    margin: auto;
+}
+
+.middle {
+    padding: 0 20% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem 10rem;
+}
+
+.middle>div {
+    text-align: center;
+}
+
+.middle>div>svg {
+    margin-bottom: 1rem;
+}
+
+.middle>div>h2 {
+    margin-bottom: 0.5rem;
+}
+
+
+.productive {
+    padding: 7% 8%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3;
+    font-size: 15px;
+}
+
+.productive>div {
+    text-align: left;
+    margin: auto;
+    margin-left: 5rem;
+}
+
+.productive>div>h1,
+.cta>h1 {
+    font-size: 2rem;
+}
+
+.productive>div>a {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    width: fit-content;
+    color: hsl(176, 68%, 64%);
+}
+
+.productive>div>a>img {
+    margin-left: 0.5rem;
+    width: 16px;
+    height: 16px;
+}
+
+.productive>div>* {
+    margin-bottom: 1rem;
+}
+
+
+.testimonials {
+    padding: 5% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonials>div:first-child::before{
+    content: url('./images/bg-quotes.png');
+    position: absolute;
+    z-index: -1;
+    width: 55px;
+    height: 45px;
+    top: -34px;
+    left: -9px;
+}
+
+.testimonials>div:first-child{
+    position: relative;
+}
+
+.testimonials>div {
+    background-color: hsl(219, 30%, 18%);
+    width: 31%;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 10px 7px 0px #47404014;
+}
+
+.profile {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.profile>img {
+    height: 2rem;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+}
+
+.profile>div>p:last-child {
+    font-size: 10px;
+}
+
+.profile>div>p:first-child {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.cta {
+    background-color: hsl(217, 28%, 15%);
+    text-align: center;
+    font-size: 15px;
+    padding: 2.5rem 3rem;
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    top: 110px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #00000054;
+}
+
+.cta>*:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.cta>p {
+    width: 90%;
+    margin: auto;
+}
+
+.cta>div>button {
+    width: 200px;
+    margin-left: 2rem;
+}
+
+input {
+    width: 60%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    position: relative;
+}
+
+.error::after {
+    content: "Please Enter a Valid email address";
+    font: 12px 'Open Sans', sans-serif;
+    color: hsl(0, 100%, 63%);
+    background-color: transparent;
+    position: absolute;
+    bottom: 16px;
+    left: 90px
+}
+
+.footer {
+    position: relative;
+    background-color: hsl(216, 53%, 9%);
+    padding: 12% 5% 5%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.links>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.links>div>a {
+    margin: 0 0 1.5rem;
+}
+
+.links>div>a:hover:after {
+    width: 0;
+}
+
+.location>div>p,
+.contact>a>span {
+    margin-left: 2rem;
+    margin-top: 0;
+}
+
+.location {
+    width: 25%;
+}
+
+.location>div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+
+.social>div {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    height: 30px;
+    margin-right: 1rem;
+    text-align: center;
+    width: 30px;
+}
+
+.social>div:hover {
+    border-color: hsl(176, 68%, 64%);
+    color: hsl(176, 68%, 64%);
+    cursor: pointer;
+}
+
+i {
+    margin-top: 7px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .middle {
+        gap: 5rem 7rem;
+    }
+
+    .productive img,
+    .productive div {
+        width: 50%;
+    }
+
+    .cta {
+        width: 70%;
+    }
+
+    .footer {
+        padding: 15% 5% 5%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+.cta p,
+    .cta>div>button,
+    input {
+        width: 90%;
+    }
+
+    .cta>div>button {
+        margin: 2rem 0 0;
+    }
+
+    .error::after {
+        bottom: 100px;
+        left: 74px
+    }
+
+    .middle, .productive, .testimonials{
+        padding:10% 7%;
+    }
+
+    .footer{
+        padding-top: 20%;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .top {
+        background-image: url("./images/bg-curvy-mobile.svg");
+    }
+
+    .intro {
+        padding: 5%;
+        width: auto;
+    }
+
+    .intro>h1 {
+        font-size: 2rem;
+    }
+
+    .intro>p {
+        font-size: 1rem;
+    }
+
+
+    .middle,
+    .productive,
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        padding: 10% 20%;
+    }
+
+    .testimonials {
+        background-position: top 5% left 20.5%;
+    }
+
+    .productive img,
+    .productive div,
+    .testimonials div {
+        width: 100%;
+    }
+
+    .productive div {
+        margin: 3rem 0 0;
+    }
+
+    .testimonials>div {
+        margin-bottom: 3rem;
+    }
+
+    .cta p,
+    .cta>div>button,
+    input {
+        width: 100%;
+    }
+
+    .cta>div>button {
+        margin: 2rem 0 0;
+    }
+
+    .error::after {
+        bottom: 100px;
+        left: 74px
+    }
+
+    .cta {
+        width: 80%;
+        top: 80px;
+    }
+
+    .footer {
+        padding: 25% 10% 5%;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center!important;
+        margin: 3rem;
+    }
+
+    .location {
+        width: 100%;
+        margin: 2rem auto;
+    }
+
+    .contact, .contact+div{
+        margin-bottom: 3rem;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-link>a{
+        margin: 0 1rem;
+    }
+
+    .middle,
+    .productive,
+    .testimonials {
+        padding: 20% 10%;
+    }
+}
